@@ -1,12 +1,18 @@
-// Navbar.tsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface NavbarProps {
   brandName: string;
-  links: { name: string; url: string }[];
 }
 
-const Navbar: React.FC<NavbarProps> = ({ brandName, links }) => {
+const Navbar: React.FC<NavbarProps> = ({ brandName }) => {
+  const navLinks = [
+    { name: "Home", url: "/home" },
+    { name: "See&Do", url: "/see" },
+    { name: "Services", url: "/services" },
+    { name: "Contact", url: "/contact" },
+  ];
+
   return (
     <nav
       style={{
@@ -25,30 +31,38 @@ const Navbar: React.FC<NavbarProps> = ({ brandName, links }) => {
           justifyContent: "space-between",
           alignItems: "center",
           padding: "1rem",
-          maxWidth: "1200px",
+          maxWidth: "1600px",
           margin: "0 auto",
         }}
       >
-        <div style={{ fontWeight: "bold", fontSize: "1.5rem" }}>
+        <Link
+          to="/"
+          style={{
+            color: "white",
+            textDecoration: "none",
+            fontWeight: "bold",
+            fontSize: "1.5rem",
+          }}
+        >
           {brandName}
-        </div>
+        </Link>
         <ul
           style={{
             listStyle: "none",
             display: "flex",
-            gap: "1rem",
+            gap: "2.3rem",
             margin: 0,
             padding: 0,
           }}
         >
-          {links.map((link, index) => (
+          {navLinks.map((link, index) => (
             <li key={index}>
-              <a
-                href={link.url}
+              <Link
+                to={link.url}
                 style={{ color: "white", textDecoration: "none" }}
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

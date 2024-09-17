@@ -1,26 +1,21 @@
-// App.tsx
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-
-const App: React.FC = () => {
-  const navLinks = [
-    { name: "Home", url: "/" },
-    { name: "About", url: "/about" },
-    { name: "Services", url: "/services" },
-    { name: "Contact", url: "/contact" },
-  ];
-
+import Home from "./Home";
+import See from "./See";
+function App() {
   return (
-    <div>
-      <Navbar brandName="My Company" links={navLinks} />
-      <main
-        style={{
-          padding: "2rem",
-          marginTop: "60px", // Add top margin to prevent content from being hidden behind the navbar
-        }}
-      ></main>
-    </div>
+    <Router>
+      <div>
+        <Navbar brandName="Events Sofia" />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/see" element={<See />} />
+          {/* <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} /> */}
+        </Routes>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
