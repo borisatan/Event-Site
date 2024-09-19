@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ brandName }) => {
         top: 0,
         left: 0,
         right: 0,
-        zIndex: 1000,
+        zIndex: 10,
       }}
     >
       <div
@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ brandName }) => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "1rem",
+          padding: "0.rem",
           maxWidth: "1600px",
           margin: "0 auto",
         }}
@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ brandName }) => {
             color: "white",
             textDecoration: "none",
             fontWeight: "bold",
-            fontSize: "1.5rem",
+            fontSize: "1.9rem",
           }}
         >
           {brandName}
