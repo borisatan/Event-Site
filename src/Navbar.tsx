@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ brandName }) => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "0.rem",
+          padding: "0.8rem",
           maxWidth: "1600px",
           margin: "0 auto",
         }}

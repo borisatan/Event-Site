@@ -9,8 +9,8 @@ const styles = {
     marginLeft: "200px",
   },
   image: {
-    width: "450px",
-    height: "350px",
+    width: "400px",
+    height: "300px",
     marginRight: "20px",
     borderRadius: "8px",
     objectFit: "cover",
@@ -22,44 +22,34 @@ const styles = {
 };
 
 const Home: React.FC = () => {
+  const items = [
+    {
+      title: "Event 1",
+      description: "Description for Event 1",
+      imageSrc: "src/assets/a_organizer_event--creator-eventbrite-.jpeg",
+    },
+    {
+      title: "Event 2",
+      description: "Description for Event 2",
+      imageSrc: "src/assets/a_organizer_event--creator-eventbrite-.jpeg",
+    },
+  ];
+
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          padding: "20px",
-          marginTop: "30px",
-          marginLeft: "200px",
-        }}
-      >
-        <img
-          src="src\assets\a_organizer_event--creator-eventbrite-.jpeg"
-          alt="Main Page Image"
-          style={{
-            width: "500px",
-            height: "400px",
-            marginRight: "20px",
-            borderRadius: "8px",
-            objectFit: "cover",
-          }}
-        />
-        <div style={{ fontSize: "19px", color: "white" }}>
-          <h1>Event 1</h1>
-          <p>This is a brief description next to the image.</p>
-        </div>
-      </div>
-      <div style={styles.container}>
-        <img
-          src="src\assets\a_organizer_event--creator-eventbrite-.jpeg"
-          alt="Main Page Image"
-          style={styles.image}
-        />
-        <div style={styles.text}>
-          <h1>Event 2</h1>
-          <p>This is a brief description next to the image.</p>
-        </div>
-      </div>
+      <ul className="event-list">
+        {items.map((item, index) => (
+          <li key={index} className="event-item">
+            <div style={styles.container}>
+              <img style={styles.image} src={item.imageSrc} alt={item.title} />
+              <div style={styles.text}>
+                <h1>{item.title}</h1>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </>
   );
 };
