@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./assets/CSS/main.scss";
 
 import SingleEvent from "./SingleEvent";
 import events from "./Events.json";
