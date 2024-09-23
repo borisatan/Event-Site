@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import{ useState} from 'react';
+// import{ useState} from 'react';
 import Navbar from "./Navbar";
 import Home from "./Home";
 import See from "./See";
@@ -7,12 +7,12 @@ import See from "./See";
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false); 
+  // const [darkMode, setDarkMode] = useState(false); 
 
-  const toggleDarkMode = () => {
-    setDarkMode(prev => !prev);
-    document.body.classList.toggle('dark-mode');
-  };
+  // const toggleDarkMode = () => {
+  //   setDarkMode(prev => !prev);
+  //   document.body.classList.toggle('dark-mode');
+  // };
 
   return (
     <Router>
@@ -24,9 +24,9 @@ function App() {
           {/* <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} /> */}
         </Routes>
-        <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+        {/* <button className="dark-mode-toggle" onClick={toggleDarkMode}>
           {darkMode ? 'Light Mode' : 'Dark Mode'} 
-        </button>
+        </button> */}
       </div>
     </Router>
   );

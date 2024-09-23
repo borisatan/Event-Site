@@ -19,6 +19,9 @@ const styles = {
     fontSize: "16px",
     color: "white",
   },
+  ul : {
+    listStyleType: "none",
+  }
 };
 
 const Home: React.FC = () => {
@@ -37,7 +40,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <ul className="event-list">
+      <ul className="event-list" style={styles.ul}>
         {items.map((item, index) => (
           <li key={index} className="event-item">
             <div style={styles.container}>
