@@ -2,12 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import{ useState} from 'react';
 import Navbar from "./Navbar";
 import Home from "./Home";
-import See from "./See";
-
-
+import Events from "./Events";
 
 function App() {
-  // const [darkMode, setDarkMode] = useState(false); 
+  // const [darkMode, setDarkMode] = useState(false);
 
   // const toggleDarkMode = () => {
   //   setDarkMode(prev => !prev);
@@ -20,7 +18,7 @@ function App() {
         <Navbar brandName="Events Sofia" />
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/see" element={<See />} />
+          <Route path="/events" element={<Events />} />
           {/* <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} /> */}
         </Routes>

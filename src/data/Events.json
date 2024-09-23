@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Event 1",
+      "description": "Description for Event 1",
+      "imageSrc": "src/assets/a_organizer_event--creator-eventbrite-.jpeg"
+    },
+    {
+      "title": "Event 2",
+      "description": "Description for Event 2",
+      "imageSrc": "src/assets/a_organizer_event--creator-eventbrite-.jpeg"
+    },
+    {
+        "title": "Event 3",
+        "description": "Description for Event 2",
+        "imageSrc": "src/assets/a_organizer_event--creator-eventbrite-.jpeg"
+    },
+    {
+        "title": "Event 4",
+        "description": "Description for Event 2",
+        "imageSrc": "src/assets/a_organizer_event--creator-eventbrite-.jpeg"
+    },
+    {
+        "title": "Event 4",
+        "description": "Description for Event 2",
+        "imageSrc": "src/assets/a_organizer_event--creator-eventbrite-.jpeg"
+    }
+  ]

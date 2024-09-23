@@ -8,7 +8,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ brandName }) => {
   const navLinks = [
     { name: "Home", url: "/home" },
-    { name: "See&Do", url: "/see" },
+    { name: "Events", url: "/events" },
     { name: "Services", url: "/services" },
     { name: "Contact", url: "/contact" },
   ];
