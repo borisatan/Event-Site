@@ -13,7 +13,7 @@ const styles = {
     height: "300px",
     marginRight: "20px",
     borderRadius: "8px",
-    objectFit: "cover",
+    // objectFit: "cover",
   },
   text: {
     fontSize: "16px",
